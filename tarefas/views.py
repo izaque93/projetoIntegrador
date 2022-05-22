@@ -8,3 +8,6 @@ def about(request):
 
 def cause(request):
     return render(request, "Cause.html")
+
+def branco(request):
+    return render(request, 'branco.html')
