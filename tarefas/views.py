@@ -11,3 +11,8 @@ def cause(request):
 
 def branco(request):
     return render(request, 'branco.html')
+
+def contato(request):
+    return render(request, 'contact.html')
+def account(request):
+    return render(request, 'account.html')

@@ -87,7 +87,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img src= "img/logo1.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -109,12 +109,12 @@
                                                 <li><a href={% url 'Cause' %}>Causa</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contato</a></li>
+                                        <li><a href={% url "contact" %}>Contato</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Fazer uma Doação</a>
+                                        <a  href={% url 'account' %}>Fazer uma Doação</a> <!--data-scroll-nav='1'-->
                                     </div>
                                 </div>
                             </div>
