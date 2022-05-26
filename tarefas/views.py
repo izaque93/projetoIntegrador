@@ -9,5 +9,8 @@ def about(request):
 def cause(request):
     return render(request, "Cause.html")
 
-def branco(request):
-    return render(request, 'branco.html')
+def blog(request):
+    return render(request, 'blog.html')
+
+def doacoes(request):
+    return render(request, "doacoes.html")
