@@ -97,71 +97,16 @@
     
     
     <div class="container">
+        
         <div class="content first-content">
             <div class="first-column">
-                <h2 class="title title-primary">Bem vindo!</h2>
-                <p class="description description-primary">Mantenha-se conectado conosco</p>
-                <p class="description description-primary">faça o login com sues dados</p>
-                <a href = {% url 'account2' %} >
-                <button id="signin" class="btn btn-primary">Entrar</button> </a>
-            </div>    
-            <div class="second-column">
-                <h2 class="title title-second">Crie Sua Conta</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">ou use seu e-mail para registrar:</p>
-                <form class="form">
-                    <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Confirm Password">
-                    </label>
-                    
-                    <a href= {% url 'account2' %}>
-                        <button class="btn btn-second">Cadastrar</button>
-                    </a>      
-                </form>
-            </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary">hello, friend!</h2>
-                <p class="description description-primary">Enter your personal details</p>
-                <p class="description description-primary">and start journey with us</p>
-                <button id="signup" class="btn btn-primary">sign up</button>
+                <h2 class="title title-primary">Ainda não é cadastro?</h2>
+                <p class="description description-primary">Cadastre-se aqui</p>
+                <a href = {% url 'account' %}>
+                <button id="signup" class="btn btn-primary">Cadastrar</button></a>
             </div>
             <div class="second-column">
-                <h2 class="title title-second">sign in to developer</h2>
+                <h2 class="title title-second">Entre com sua conta</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
@@ -181,7 +126,7 @@
                         </a>
                     </ul>
                 </div><!-- social media -->
-                <p class="description description-second">or use your email account:</p>
+                <p class="description description-second">ou use a sua conta de e-mail:</p>
                 <form class="form">
                 
                     <label class="label-input" for="">
@@ -195,7 +140,8 @@
                     </label>
                 
                     <a class="password" href="#">esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
+                    <a href = {% url 'account' %}>
+                        <button class="btn btn-second">Entrar</button></a>
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->

@@ -16,3 +16,5 @@ def contato(request):
     return render(request, 'contact.html')
 def account(request):
     return render(request, 'account.html')
+def account2(request):
+    return render(request, 'account2.html')
