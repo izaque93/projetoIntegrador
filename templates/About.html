@@ -92,26 +92,19 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>home</a></li>
+                                        <li><a href={% url 'index' %}>Home</a></li>
                                         <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
+                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li>
+                                            <a href={% url 'Cause' %}>Causa</a>
                                         </li>
-                                        <li><a href="#">Páginas <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href={% url 'Cause' %}>Causa</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contato</a></li>
+                                        <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Fazer uma Doação</a>
+                                        <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
+                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
                                     </div>
                                 </div>
                             </div>
@@ -140,99 +133,47 @@
     </div>
     <!-- bradcam_area_end  -->
 
-    <!-- reson_area_start  -->
-    <div class="reson_area section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb-55">
-                        <h3><span>Reason of Helping</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="img/help/1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Collecting Fund</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="img/help/2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Collecting Fund</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="img/help/3.png" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Collecting Fund</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- reson_area_end  -->
-
     <!-- latest_activites_area_start  -->
     <div class="latest_activites_area">
-        <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
-            <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">
-                <i class="flaticon-ui"></i>
-            </a>
-        </div>
         <div class="container">
-            <div class="row justify-content-end">
+            <div class="row">
                 <div class="col-lg-7">
-                    <div class="activites_info">
-                        <div class="section_title">
-                            <h3> <span>CORAÇÃO EM AÇÃO  </span><br> </h3>
-                            <h4>oficialcoracaoemacao</h4>
-                        </div>
-                        <p class="para_1">A associação Coração em Ação é uma entidade sem fins lucrativos, 
-                            fundada em 2005, com sede no Colégio Taboão. <br>
-                            Sua missão é amparar as instituições e comunidades carentes,
-                            estabelecendo parcerias com outras escolas, entidades, comércios e empresas.</p class="para_1">
-                        <p class="para_2">Desde a sua criação, o engajamento dos alunos, pais e professores 
-                            cresce a cada ano, fazendo com que o interesse pela solidariedade e cooperação 
-                            despertem muito mais cedo em nossos estudantes, e assim, 
-                            multiplicamos a ideia de sempre ajudar o próximo.</p>
-                            
-                        <a href="#" data-scroll-nav="1" class="boxed-btn4">Doe agora</a>
+                    <div class="section_title">
+                        <h3> <span>Inscreva-se </span><br> </h3>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
+
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
+
+                    </div>
+
+                    <a href="#" data-scroll-nav="1" class="boxed-btn4">Doe agora</a>
+                </div>
+            </div>
         </div>
+
     </div>
     <!-- latest_activites_area_end  -->
 
@@ -416,7 +357,7 @@
                                               <span class="input-group-text" id="basic-addon1">$</span>
                                             </div>
                                             <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
-                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

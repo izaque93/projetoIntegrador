@@ -61,26 +61,19 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url "index" %}>home</a></li>
-                                        <li><a href={% url "About" %}>Sobre Nós</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
+                                        <li><a href={% url 'index' %}>Home</a></li>
+                                        <li><a href={% url 'About' %}>Sobre Nós</a></li>
+                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li>
+                                            <a href={% url 'Cause' %}>Causa</a>
                                         </li>
-                                        <li><a href="#">Páginas <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href={% url "Cause" %}>Causa</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contato</a></li>
+                                        <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a  href={% url 'account2' %}>Fazer uma Doação</a> <!--data-scroll-nav='1'-->
+                                        <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
+                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
                                     </div>
                                 </div>
                             </div>
@@ -93,8 +86,20 @@
             </div>
         </div>
     </header>
-    
-    <br>
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="slider_text ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="latest_activites_area">
+    </div>
     <div class="container">
         <div class="content first-content">
             <div class="first-column">

@@ -9,12 +9,8 @@ def about(request):
 def cause(request):
     return render(request, "Cause.html")
 
-def branco(request):
-    return render(request, 'branco.html')
+def blog(request):
+    return render(request, 'blog.html')
 
-def contato(request):
-    return render(request, 'contact.html')
-def account(request):
-    return render(request, 'account.html')
-def account2(request):
-    return render(request, 'account2.html')
+def doacoes(request):
+    return render(request, "doacoes.html")

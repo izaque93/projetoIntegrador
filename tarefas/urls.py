@@ -3,10 +3,8 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.paginaInicial, name = 'index'),
-    path('About/', views.about, name = 'About'),
-    path('Cause/', views.cause, name = 'Cause'),
-    path('branco/', views.branco, name ='branco'),
-    path('contact/', views.contato, name = 'contact'),
-    path('account/', views.account, name= 'account'),
-    path('account2/', views.account2, name= 'account2')
+    path('ajuda', views.about, name = 'About'),
+    path('causa', views.cause, name = 'Cause'),
+    path('blog', views.blog, name ='blog'),
+    path('doacoes', views.doacoes, name = 'doacoes')
 ]
