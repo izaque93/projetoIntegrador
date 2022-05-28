@@ -8,44 +8,9 @@
     
     {% endblock %}
 
-
-<!--doctype html>
-<html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Charifit</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1"-->
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!--link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"-->
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <!--link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css"-->
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-<!--/head>
-
-<body-->
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-
-    <!-- header-start -->
+    
     {% block conteudo %}
+
     <header>
         <div class="header-area ">
             <div class="header-top_area">
@@ -103,7 +68,8 @@
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Fazer uma Doação</a>
+                                        <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
+                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
                                     </div>
                                 </div>
                             </div>
@@ -132,100 +98,48 @@
     </div>
     <!-- bradcam_area_end  -->
 
-     <!-- reson_area_start  -->
-     <div class="reson_area section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb-55">
-                        <h3><span>Razões para ajudar</span></h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="{% static 'img/help/1.png' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Collecting Fund</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="{% static 'img/help/2.png' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Blood Camp</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_reson">
-                        <div class="thum">
-                            <div class="thum_1">
-                                <img src="{% static 'img/help/3.png' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="help_content">
-                            <h4>Friendly Volunteer</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- reson_area_end  -->
-
     <!-- latest_activites_area_start  -->
     <div class="latest_activites_area">
-        <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
-            <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">
-                <i class="flaticon-ui"></i>
-            </a>
-        </div>
         <div class="container">
-            <div class="row justify-content-end">
+            <div class="row">
                 <div class="col-lg-7">
-                    <div class="activites_info">
-                        <div class="section_title">
-                            <h3> <span>CORAÇÃO EM AÇÃO  </span><br> </h3>
-                            <h4>oficialcoracaoemacao</h4>
-                        </div>
-                        <p class="para_1">A associação Coração em Ação é uma entidade sem fins lucrativos, 
-                            fundada em 2005, com sede no Colégio Taboão. <br>
-                            Sua missão é amparar as instituições e comunidades carentes,
-                            estabelecendo parcerias com outras escolas, entidades, comércios e empresas.</p>
-                        <p class="para_2">Desde a sua criação, o engajamento dos alunos, pais e professores 
-                            cresce a cada ano, fazendo com que o interesse pela solidariedade e cooperação 
-                            despertem muito mais cedo em nossos estudantes, e assim, 
-                            multiplicamos a ideia de sempre ajudar o próximo.</p>
-                            
-                        <a href="#" data-scroll-nav="1" class="boxed-btn4">Doe agora</a>
+                    <div class="section_title">
+                    </br>
+                        <h3> <span>Endereço</span><br> </h3>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group">
+                        <form  method="get" action=".">
+                            <label class="label-input" for="">
+                            <input class="form-control" name="cep" type="text" id="cep" value="" size="9" maxlength="9"
+                                            placeholder= "CEP" onblur="pesquisacep(this.value);" /></label>
+                                
+                            <label class="label-input" for="">
+                            <input class="form-control" name="rua" type="text" id="rua" size="50" placeholder = "Rua" /></label>
+                            <label class="label-input" for="" >
+                            <input class="form-control" name="número" type="text" size="6" placeholder = "Número" /></label>
+                            <label class="label-input" for="" >
+                            <input class="form-control" name="número" type="text" size="53" placeholder = "Complemento" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="bairro" type="text" id="bairro" size="40" placeholder = "Bairro" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="cidade" type="text" id="cidade" size="30" placeholder = "Cidade" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="uf" type="text" id="uf" size="2" placeholder = "UF" /></label>
+                    
+                        </form>
+                    </div>
+                </br>
+                
+                    <a href= {% url 'accountCep' %} class="boxed-btn4">Limpar</a>
+                    <a href= "#" class="boxed-btn4">Enviar</a>
+                </div>
+            </div>
         </div>
+
     </div>
     <!-- latest_activites_area_end  -->
 
@@ -409,7 +323,7 @@
                                               <span class="input-group-text" id="basic-addon1">$</span>
                                             </div>
                                             <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
-                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -574,7 +488,76 @@
             </div>
         </div>
     </footer>
-    {% endblock %}
-    <!-- footer_end  -->
+    <script>
+    
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+               
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+                
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+                    
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
 
-    <!-- link that opens popup -->
+    {% endblock %}

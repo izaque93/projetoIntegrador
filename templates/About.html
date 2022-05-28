@@ -139,6 +139,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section_title">
+                    </br>
                         <h3> <span>Inscreva-se </span><br> </h3>
                     </div>
                 </div>
@@ -149,27 +150,30 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
 
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
 
                     </div>
 
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
+                            <!--<span class="input-group-text" id="basic-addon1">$</span>-->
                         </div>
-                        <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1">
 
                     </div>
+                </br>
 
-                    <a href="#" data-scroll-nav="1" class="boxed-btn4">Doe agora</a>
+                    <a href= {% url 'About' %}  class="boxed-btn4">Limpar</a>
+                    <a href= {% url 'account' %} class="boxed-btn4">Enviar</a>
                 </div>
             </div>
         </div>

@@ -14,3 +14,9 @@ def blog(request):
 
 def doacoes(request):
     return render(request, "doacoes.html")
+
+def pagInscritos(request):
+    return render(request, 'account.html')
+
+def contaCep(request):
+    return render(request, 'accountCep.html')

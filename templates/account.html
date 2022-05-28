@@ -11,195 +11,477 @@
     
     {% block conteudo %}
 
-    <link rel="stylesheet" href={% static "css/estilo.css" %}>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <header>
-            <div class="header-area ">
-                <div class="header-top_area">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-6 col-md-12 col-lg-8">
-                                <div class="short_contact_list">
-                                    <ul>
-                                        <li><a href="#"> <i class="fa fa-phone"></i> (11) 4178-0502</a></li>
-                                        <li><a href="#"> <i class="fa fa-envelope"></i>contato@coracaoemacao.com.br</a></li>
-                                    </ul>
-                                </div>
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                </ul>
                             </div>
-                            <div class="col-xl-6 col-md-6 col-lg-4">
-                                <div class="social_media_links d-none d-lg-block">
-                                    <a href="#">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa fa-pinterest-p"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="sticky-header" class="main-header-area">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-xl-3 col-lg-3">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src= "img/logo1.png" alt="">
-                                    </a>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href={% url 'index' %}>Home</a></li>
+                                        <li><a href={% url 'About' %}>Sobre Nós</a></li>
+                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li>
+                                            <a href={% url 'Cause' %}>Causa</a>
+                                        </li>
+                                        <!--<li><a href="contact.html">Contato</a></li>-->
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
+                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-9 col-lg-9">
-                                <div class="main-menu">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href={% url 'index' %}>Home</a></li>
-                                            <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href={% url 'branco' %}>blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Páginas <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">elements</a></li>
-                                                    <li><a href={% url 'Cause' %}>Causa</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href={% url "contact" %}>Contato</a></li>
-                                        </ul>
-                                    </nav>
-                                    <div class="Appointment">
-                                        <div class="book_btn d-none d-lg-block">
-                                            <a  href={% url 'account2' %}>Fazer uma Doação</a> <!--data-scroll-nav='1'-->
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Quem Somos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+    <!-- latest_activites_area_start  -->
+    <div class="latest_activites_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="section_title">
+                    </br>
+                        <h3> <span>Entrar</span><br> </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
+
+                    </div>
+                
+                    <a href = "#">Esqueceu sua senha?</a>
+                </br>
+            <br>
+                    <a href= {% url 'accountCep' %} class="boxed-btn4">Enviar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- latest_activites_area_end  -->
+
+    <!-- counter_area_start  -->
+    <div class="counter_area pt-120">
+        <div class="container">
+            <div class="counter_bg overlay">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-calendar"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Finished Event</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-heart-beat"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Finished Event</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-in-love"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Finished Event</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-hug"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Finished Event</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter_area_end  -->
+
+    <!-- our_volunteer_area_start  -->
+    <div class="our_volunteer_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Our Volunteer</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="img/volenteer/1.png" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Sakil khan</h4>
+                                <p>Donner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="img/volenteer/2.png" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Emran Ahmed</h4>
+                                <p>Volunteer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="img/volenteer/3.png" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-pinterest"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h4>Sabbir Ahmed</h4>
+                                <p>Volunteer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our_volunteer_area_end  -->
+
+
+    <div data-scroll-index='1' class="make_donation_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Make a Donation</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form action="#" class="donation_form">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="single_amount">
+                                    <div class="input_field">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="basic-addon1">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+                            <div class="col-md-8">
+                                <div class="single_amount">
+                                   <div class="fixed_donat d-flex align-items-center justify-content-between">
+                                       <div class="select_prise">
+                                           <h4>Select Amount:</h4>
+                                       </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="blns_1" name="radio-group" checked>
+                                            <label for="blns_1">10</label>
+                                        </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="blns_2" name="radio-group" checked>
+                                            <label for="blns_2">30</label>
+                                        </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="Other" name="radio-group" checked>
+                                            <label for="Other">Other</label>
+                                        </div>
+                                   </div>
+                                </div>
                             </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="donate_now_btn text-center">
+                        <a href="#" class="boxed-btn4">Donate Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Sponsor</a></li>
+                                <li><a href="#">Fundraise</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top News
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- header-end -->
-    
-    
-    
-    <div class="container">
-        <div class="content first-content">
-            <div class="first-column">
-                <h2 class="title title-primary">Bem vindo!</h2>
-                <p class="description description-primary">Mantenha-se conectado conosco</p>
-                <p class="description description-primary">faça o login com sues dados</p>
-                <a href = {% url 'account2' %} >
-                <button id="signin" class="btn btn-primary">Entrar</button> </a>
-            </div>    
-            <div class="second-column">
-                <h2 class="title title-second">Crie Sua Conta</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">ou use seu e-mail para registrar:</p>
-                <form class="form">
-                    <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Confirm Password">
-                    </label>
-                    
-                    <a href= {% url 'account2' %}>
-                        <button class="btn btn-second">Cadastrar</button>
-                    </a>      
-                </form>
-            </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary">hello, friend!</h2>
-                <p class="description description-primary">Enter your personal details</p>
-                <p class="description description-primary">and start journey with us</p>
-                <button id="signup" class="btn btn-primary">sign up</button>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os Direitos Reservados | Este site foi produzido com <i class="ti-heart" aria-hidden="true"></i> by <a href="https://univesp.br" target="_blank">PI UNIVESP</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="second-column">
-                <h2 class="title title-second">sign in to developer</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">or use your email account:</p>
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                
-                    <a class="password" href="#">esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
-                </form>
-            </div><!-- second column -->
-        </div><!-- second-content -->
-    </div>
-    <!--script src={% static "js/app.js" %}></script-->
+        </div>
+    </footer>
 
     {% endblock %}
