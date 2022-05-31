@@ -86,8 +86,8 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src= "img/logo1.png" alt="">
+                                <a href="{% url 'index' %}">
+                                    <img src= "{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -95,11 +95,11 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>Home</a></li>
-                                        <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'About' %}">Sobre Nós</a></li>
+                                        <li><a href="{% url 'blog' %}">blog</a></li>
                                         <li>
-                                            <a href={% url 'Cause' %}>Causa</a>
+                                            <a href="{% url 'Cause' %}">Causa</a>
                                         </li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
@@ -107,7 +107,7 @@
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
                                         <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
-                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
+                                        <a href="{% url 'doacoes' %}">Fazer uma Doação</a>
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +278,7 @@
                     <div class="causes_active owl-carousel">
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src="{% static 'img/causes/1.png' %}" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -303,7 +303,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/2.png" alt="">
+                                <img src="{% static 'img/causes/2.png' %}" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -328,7 +328,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/3.png" alt="">
+                                <img src="{% static 'img/causes/3.png' %}" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -353,7 +353,7 @@
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src= "{% static 'img/causes/1.png' %}" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -452,7 +452,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/1.png" alt="">
+                            <img src="{% static 'img/volenteer/1.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -481,7 +481,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/2.png" alt="">
+                            <img src="{% static 'img/volenteer/2.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -510,7 +510,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/3.png" alt="">
+                            <img src="{% static 'img/volenteer/3.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -556,7 +556,7 @@
                     <div class="news_active owl-carousel">
                         <div class="single__blog d-flex align-items-center">
                             <div class="thum">
-                                <img src="img/news/1.png" alt="">
+                                <img src="{% static 'img/news/1.png' %}" alt="">
                             </div>
                             <div class="newsinfo">
                                 <span>July 18, 2019</span>
@@ -573,7 +573,7 @@
                         </div>
                         <div class="single__blog d-flex align-items-center">
                             <div class="thum">
-                                <img src="img/news/2.png" alt="">
+                                <img src="{% static 'img/news/2.png' %}" alt="">
                             </div>
                             <div class="newsinfo">
                                 <span>July 18, 2019</span>
