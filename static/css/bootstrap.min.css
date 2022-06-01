@@ -224,8 +224,10 @@ figure {
 
 img {
     vertical-align: middle;
-    border-style: none
+    border-style: none;
+    /*border-radius: 50px;*/
 }
+
 
 svg:not(:root) {
     overflow: hidden
