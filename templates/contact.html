@@ -84,7 +84,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -92,26 +92,18 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url "index" %}>home</a></li>
-                                        <li><a href={% url "About" %}>About</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
+                                        <li><a href={% url 'index' %}>Home</a></li>
+                                        <li><a href={% url 'About' %}>Sobre Nós</a></li>
+                                        <li><a href={% url 'Cause' %}>Causa</a></li>
+                                        <li>
+                                            <a href={% url 'contact' %}>Contato</a>
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href="Cause.html">Cause</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Make a Donate</a>
+                                        <a href="{% url 'doacoes' %}">Fazer uma Doação</a>
                                     </div>
                                 </div>
                             </div>
@@ -255,8 +247,8 @@
                     <div class="col-xl-4 col-md-6 col-lg-4 ">
                         <div class="footer_widget">
                             <div class="footer_logo">
-                                <a href="#">
-                                    <img src="img/footer_logo.png" alt="">
+                                <a href="{% url 'index' %}">
+                                    <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                             <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.

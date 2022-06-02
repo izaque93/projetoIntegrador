@@ -14,7 +14,11 @@
     -ms-flex-pack: start;
     justify-content: start;
 }
-
+/*Elemento adicionado por William para o logo*/
+.photo{
+    border-style: solid;
+    border-radius: 50px;
+}
 
 /* line 13, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_extend.scss */
 

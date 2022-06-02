@@ -20,3 +20,6 @@ def pagInscritos(request):
 
 def contaCep(request):
     return render(request, 'accountCep.html')
+
+def contato(request):
+    return render(request, 'contact.html')

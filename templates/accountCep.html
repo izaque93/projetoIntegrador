@@ -49,7 +49,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img class = "photo" src="{% static 'img/logo.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -59,9 +59,9 @@
                                     <ul id="navigation">
                                         <li><a href={% url 'index' %}>Home</a></li>
                                         <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li><a href={% url 'Cause' %}>Causa</a></li>
                                         <li>
-                                            <a href={% url 'Cause' %}>Causa</a>
+                                            <a href={% url 'contact' %}>Contato</a>
                                         </li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
@@ -307,7 +307,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center mb-55">
-                        <h3><span>Make a Donation</span></h3>
+                        <h3><span>Fazer uma Doação</span></h3>
                     </div>
                 </div>
             </div>
@@ -355,7 +355,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="donate_now_btn text-center">
-                        <a href="#" class="boxed-btn4">Donate Now</a>
+                        <a href="#" class="boxed-btn4">Doe Agora</a>
                     </div>
                 </div>
 
@@ -372,7 +372,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="img/footer_logo.png" alt="">
+                                    <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                             <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
