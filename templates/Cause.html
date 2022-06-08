@@ -49,7 +49,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -59,9 +59,9 @@
                                     <ul id="navigation">
                                         <li><a href={% url 'index' %}>Home</a></li>
                                         <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li><a href={% url 'Cause' %}>Causa</a></li>
                                         <li>
-                                            <a href={% url 'Cause' %}>Causa</a>
+                                            <a href={% url 'contact' %}>Contato</a>
                                         </li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
@@ -105,7 +105,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/1.png" alt="">
+                            <img src="{% static 'img/causes/1.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">
@@ -121,13 +121,11 @@
                                 <span>Raised: $5000.00 </span>
                                 <span>Goal: $9000.00 </span>
                             </div>
-                            <!--a href="cause_details.html"><h4>Help us to Send Food</h4></a-->
+                            <a href="cause_details.html"><h4>Help us to Send Food</h4></a>
                             
-                                <img src="img/help/2.png" alt="">
-                            
-                            <!--p>The passage is attributed to an 
+                                <p>The passage is attributed to an 
                                 unknown typesetter in the century 
-                                who is thought</p-->
+                                who is thought</p>
                            
                             <a class="read_more" href="cause_details.html">Read More</a>
                         </div>
@@ -136,7 +134,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/2.png" alt="">
+                            <img src="{% static 'img/causes/2.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">
@@ -163,7 +161,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/3.png" alt="">
+                            <img src="{% static 'img/causes/3.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">
@@ -191,7 +189,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/4.png" alt="">
+                            <img src="{% static 'img/causes/4.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">
@@ -219,7 +217,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/5.png" alt="">
+                            <img src="{% static 'img/causes/5.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">
@@ -247,7 +245,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_cause">
                         <div class="thumb">
-                            <img src="img/causes/6.png" alt="">
+                            <img src="{% static 'img/causes/6.png' %}" alt="">
                         </div>
                         <div class="causes_content">
                             <div class="custom_progress_bar">

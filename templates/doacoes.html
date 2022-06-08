@@ -48,8 +48,8 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="{% static 'img/logo.png' %}" alt="">
+                                <a href="{% url 'index' %}">
+                                    <img class= "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -59,9 +59,9 @@
                                     <ul id="navigation">
                                         <li><a href={% url 'index' %}>Home</a></li>
                                         <li><a href={% url 'About' %}>Sobre Nós</a></li>
-                                        <li><a href={% url 'blog' %}>blog</a></li>
+                                        <li><a href={% url 'Cause' %}>Causa</a></li>
                                         <li>
-                                            <a href={% url 'Cause' %}>Causa</a>
+                                            <a href={% url 'contact' %}>Contato</a>
                                         </li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
@@ -169,7 +169,7 @@
                         <p class="para_1">A associação Coração em Ação é uma entidade sem fins lucrativos, 
                             fundada em 2005, com sede no Colégio Taboão. <br>
                             Sua missão é amparar as instituições e comunidades carentes,
-                            estabelecendo parcerias com outras escolas, entidades, comércios e empresas.</p class="para_1">
+                            estabelecendo parcerias com outras escolas, entidades, comércios e empresas.</p>
                         <p class="para_2">Desde a sua criação, o engajamento dos alunos, pais e professores 
                             cresce a cada ano, fazendo com que o interesse pela solidariedade e cooperação 
                             despertem muito mais cedo em nossos estudantes, e assim, 

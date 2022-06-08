@@ -8,9 +8,9 @@
     
     {% endblock %}
 
-
-    <!-- header-start -->
+    
     {% block conteudo %}
+
     <header>
         <div class="header-area ">
             <div class="header-top_area">
@@ -49,7 +49,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
+                                    <img class = "photo" src="{% static 'img/logo.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -105,42 +105,38 @@
                 <div class="col-lg-7">
                     <div class="section_title">
                     </br>
-                        <h3> <span>Inscreva-se </span><br> </h3>
+                        <h3> <span>Endereço</span><br> </h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-7">
                     <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
-
+                        <form  method="get" action=".">
+                            <label class="label-input" for="">
+                            <input class="form-control" name="cep" type="text" id="cep" value="" size="9" maxlength="9"
+                                            placeholder= "CEP" onblur="pesquisacep(this.value);" /></label>
+                                
+                            <label class="label-input" for="">
+                            <input class="form-control" name="rua" type="text" id="rua" size="50" placeholder = "Rua" /></label>
+                            <label class="label-input" for="" >
+                            <input class="form-control" name="número" type="text" size="6" placeholder = "Número" /></label>
+                            <label class="label-input" for="" >
+                            <input class="form-control" name="número" type="text" size="53" placeholder = "Complemento" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="bairro" type="text" id="bairro" size="40" placeholder = "Bairro" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="cidade" type="text" id="cidade" size="30" placeholder = "Cidade" /></label>
+                            <label class="label-input" for="">
+                            <input class="form-control" name="uf" type="text" id="uf" size="2" placeholder = "UF" /></label>
+                    
+                        </form>
                     </div>
-                    <br>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
-
-                    </div>
-                    <br>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
-                            <!--<span class="input-group-text" id="basic-addon1">$</span>-->
-                        </div>
-                        <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1">
-
-                    </div>
-                </br>
-
-                    <a href= {% url 'account' %}  class="boxed-btn4">Entrar</a>
-                    <a href= {% url 'About' %} class="boxed-btn4">Cadastrar</a>
-                </div>
+                    </br>
                 
+                    <a href= {% url 'accountCep' %} class="boxed-btn4">Limpar</a>
+                    <a href= "#" class="boxed-btn4">Enviar</a>
+                </div>
             </div>
         </div>
 
@@ -216,7 +212,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/1.png" alt="">
+                            <img src= "{% static 'img/volenteer/1.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -245,7 +241,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/2.png" alt="">
+                            <img src="{% static 'img/volenteer/2.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -274,7 +270,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_volenteer">
                         <div class="volenteer_thumb">
-                            <img src="img/volenteer/3.png" alt="">
+                            <img src= "{% static 'img/volenteer/3.png' %}" alt="">
                         </div>
                         <div class="voolenteer_info d-flex align-items-end">
                             <div class="social_links">
@@ -492,4 +488,76 @@
             </div>
         </div>
     </footer>
+    <script>
+    
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+               
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+                
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+                    
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
+
     {% endblock %}
