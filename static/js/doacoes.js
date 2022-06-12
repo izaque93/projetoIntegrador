@@ -1,3 +1,5 @@
+console.log("Entrouuuu")
+
 $(document).ready(function() {
 
     $(".plus_roupas").click(function() {
@@ -62,6 +64,49 @@ $(document).ready(function() {
             a = (a < 10) ? "0" + a : a;
             $(".num_brinquedos").text(a)
         }
+    })
+
+    $("#enviar_doacoes").click(function() {
+
+        roupas = $("#roupas").text()
+        num_roupas = $(".num_roupas").text()
+        objetos = $("#objetos").text()
+        num_objetos = $(".num_objetos").text()
+        calcados = $("#calcados").text()
+        num_calcados = $(".num_calcados").text()
+        brinquedos = $("#brinquedos").text()
+        num_brinquedos = $(".num_brinquedos").text()
+        console.log(roupas, num_roupas, objetos, num_objetos, calcados, num_calcados, brinquedos, num_brinquedos)
+
+        dados = {
+            roupas,
+            num_roupas,
+            objetos,
+            num_objetos,
+            calcados,
+            num_calcados,
+            brinquedos,
+            num_brinquedos
+        }
+
+        $.ajax({
+            url: "/enviaDadosDoacoes",
+            type: "GET",
+            dataType: "json",
+            data: dados,
+            success: function(response) {
+                console.log(response)
+                    //data - response from server
+            },
+            error: function(response) {
+
+            }
+        });
+
+        console.log(dados)
+
+
+
     })
 
 })

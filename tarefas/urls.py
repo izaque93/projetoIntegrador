@@ -9,5 +9,6 @@ urlpatterns = [
     path('doacoes', views.doacoes, name = 'doacoes'),
     path('entrar', views.pagInscritos, name = 'account'),
     path('cep', views.contaCep, name = 'accountCep'),
-    path('contato', views.contato, name= 'contact')
+    path('contato', views.contato, name= 'contact'),
+    path('enviaDadosDoacoes', views.enviaDadosDoacoes, name='enviaDadosDoacoes')
 ]

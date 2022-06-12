@@ -1,0 +1,11 @@
+{
+    "CONFIG_DB": [{
+        "HOSTNAME": "castor.db.elephantsql.com",
+        "//HOSTNAME": "database-1.csf6tiyhys0b.us-east-1.rds.amazonaws.com",
+        "DB_NAME": "dyinyvgt",
+        "USERNAME": "dyinyvgt",
+        "PASSWORD": "VDO80ZzjvRwwiJJ0AfAcIpJDzHQOC9kn",
+        "SQL_ALCHEME": "postgres://dyinyvgt:VDO80ZzjvRwwiJJ0AfAcIpJDzHQOC9kn@castor.db.elephantsql.com/dyinyvgt"
+    }]
+
+}
