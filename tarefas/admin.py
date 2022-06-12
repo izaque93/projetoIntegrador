@@ -1,5 +1,5 @@
 from django.contrib import admin
-import psycopg2
+import psycopg2 
 
 # Register your models here.
 
