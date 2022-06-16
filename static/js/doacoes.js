@@ -109,6 +109,40 @@ $(document).ready(function() {
 
     })
 
+    $("#enviarCadastro").click(function() {
+
+        email = $("#email").val()
+        password = $("#password").val()
+        confpassword = $("#confpassword").val()
+
+        console.log(email,password, confpassword)
+
+        dados = {
+            email,
+            password,
+            confpassword
+        }
+
+        // $.ajax({
+        //     url: "/enviaDadosDoacoes",
+        //     type: "GET",
+        //     dataType: "json",
+        //     data: dados,
+        //     success: function(response) {
+        //         console.log(response)
+        //             //data - response from server
+        //     },
+        //     error: function(response) {
+
+        //     }
+        // });
+
+        console.log(dados)
+
+
+
+    })
+
     $("#enviar").click(function(){
         message = $("#message").val()
         name = $("#name").val()
