@@ -46,3 +46,18 @@ def enviaDadosDoacoes(request):
 
         print("Entrouuu 2", roupas, num_roupas, objetos, num_objetos, calcados, num_calcados, brinquedos, num_brinquedos)
     return JsonResponse({'msg': retorno, 'status': 200}, status=200)
+
+def enviarEmailContatos(request):
+    cadastro = CadastroDoacoes()
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    if is_ajax:
+        message = request.GET['message']
+        name = request.GET['name']
+        email = request.GET['email']
+        subject = request.GET['subject']
+
+        retorno = cadastro.enviar_email(message, name, email, subject)
+
+        print("Entrouu enviar", retorno)
+
+    return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)

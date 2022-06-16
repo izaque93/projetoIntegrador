@@ -109,7 +109,33 @@ $(document).ready(function() {
 
     })
 
+    $("#enviar").click(function(){
+        message = $("#message").val()
+        name = $("#name").val()
+        email = $("#email").val()
+        subject = $("#subject").val()
+
+        dados = {message, name, email, subject}
+
+        console.log("Entrouu", dados)
+        
+        $.ajax({
+            url: "/enviarEmailContatos",
+            type: "GET",
+            dataType: "json",
+            data: dados,
+            success: function(response) {
+                console.log(response)
+                    //data - response from server
+            },
+            error: function(response) {
+
+            }
+        });
+
+    })
 })
+
 
 /*const plus_roupas = document.querySelector(".plus")
 const minus_roupas = document.querySelector(".minus")
