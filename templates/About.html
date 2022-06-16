@@ -137,7 +137,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" id="email" aria-describedby="basic-addon1">
 
                     </div>
                     <br>
@@ -145,7 +145,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Username" id="password"  aria-describedby="basic-addon1">
 
                     </div>
                     <br>
@@ -154,13 +154,14 @@
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                             <!--<span class="input-group-text" id="basic-addon1">$</span>-->
                         </div>
-                        <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" id="confpassword" aria-describedby="basic-addon1">
 
                     </div>
                 </br>
 
                     <a href= {% url 'account' %}  class="boxed-btn4">Entrar</a>
-                    <a href= {% url 'About' %} class="boxed-btn4">Cadastrar</a>
+                    <input type="submit"  class="btn btn-primary btn-lg btn-block" id="enviarCadastro" name="enviarCadastro"/>
+                    <!--<a href= {% url 'About' %} class="boxed-btn4" id="">Cadastrar</a>-->
                 </div>
                 
             </div>

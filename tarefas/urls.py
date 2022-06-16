@@ -10,5 +10,7 @@ urlpatterns = [
     path('entrar', views.pagInscritos, name = 'account'),
     path('cep', views.contaCep, name = 'accountCep'),
     path('contato', views.contato, name= 'contact'),
-    path('enviaDadosDoacoes', views.enviaDadosDoacoes, name='enviaDadosDoacoes')
+    path('enviaDadosDoacoes', views.enviaDadosDoacoes, name='enviaDadosDoacoes'),
+    path('enviarEmailContatos', views.enviarEmailContatos, name='enviarEmailContatos')
+
 ]
