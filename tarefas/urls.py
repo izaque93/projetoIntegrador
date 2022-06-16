@@ -11,6 +11,6 @@ urlpatterns = [
     path('cep', views.contaCep, name = 'accountCep'),
     path('contato', views.contato, name= 'contact'),
     path('enviaDadosDoacoes', views.enviaDadosDoacoes, name='enviaDadosDoacoes'),
-    path('enviarEmailContatos', views.enviarEmailContatos, name='enviarEmailContatos')
-
+    path('enviarEmailContatos', views.enviarEmailContatos, name='enviarEmailContatos'),
+    path('cadastroComCep', views.cadastroComCep, name = 'cadastroComCep')
 ]

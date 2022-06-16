@@ -1,3 +1,4 @@
+import email
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseBadRequest, JsonResponse
 from tarefas.models import CadastroDoacoes
@@ -61,3 +62,23 @@ def enviarEmailContatos(request):
         print("Entrouu enviar", retorno)
 
     return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)
+
+def cadastroComCep(request):
+    cadastroComCep = CadastroDoacoes()
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    if is_ajax:
+        #data = json.loads(request)
+        cep = request.GET['cep']
+        rua = request.GET['rua']
+        numero = request.GET['numero']
+        complemento = request.GET['complemento']
+        bairro = request.GET['bairro']
+        cidade = request.GET['cidade']
+        uf = request.GET['uf']
+        email = request.GET['email']
+        password = request.GET['password']
+        confpassword = request.GET['confpassword']
+        
+        retorno = cadastroComCep.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
+        print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
+        return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)

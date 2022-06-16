@@ -1,3 +1,4 @@
+from sqlite3 import connect
 from django.db import models
 from tarefas.admin import Connection
 from requests import post
@@ -48,3 +49,20 @@ class CadastroDoacoes:
                               }
                     )
 #["juliocartier@gmail.com", "willartes@gmail.com", "jecolle@gmail.com"]
+
+    def cadastroComCep(self, cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword):
+        connection = Connection() 
+        try:
+            cur = connection.conn()
+            cur_aux = cur.cursor()
+            SQL = f"""INSERT INTO CADASTRO(CEP, RUA, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF, EMAIL, PASSWORD, CONFPASSWORD)
+                                            VALUES(%S, %S, %S, %S, %S, %S, %S, %S, %S, %S);"""
+            dados = (cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
+            
+            cur_aux.execute(SQL, dados)
+
+            cur.commit()
+            cur_aux.close()
+            return "Inseridos com sucesso"
+        except Exception as e:
+            print(e)
