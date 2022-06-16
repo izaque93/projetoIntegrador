@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     $(".min_roupas").click(function() {
         a = $(".num_roupas")[0].outerText
-        if (a > 1) {
+        if (a > 0) {
             a--
             a = (a < 10) ? "0" + a : a;
             $(".num_roupas").text(a)
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     $(".min_objetos").click(function() {
         a = $(".num_objetos")[0].outerText
-        if (a > 1) {
+        if (a > 0) {
             a--
             a = (a < 10) ? "0" + a : a;
             $(".num_objetos").text(a)
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     $(".min_calcados").click(function() {
         a = $(".num_calcados")[0].outerText
-        if (a > 1) {
+        if (a > 0) {
             a--
             a = (a < 10) ? "0" + a : a;
             $(".num_calcados").text(a)
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     $(".min_brinquedos").click(function() {
         a = $(".num_brinquedos")[0].outerText
-        if (a > 1) {
+        if (a > 0) {
             a--
             a = (a < 10) ? "0" + a : a;
             $(".num_brinquedos").text(a)
