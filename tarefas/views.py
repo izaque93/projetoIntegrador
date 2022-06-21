@@ -77,8 +77,8 @@ def cadastroComCep(request):
         uf = request.GET['uf']
         email = request.GET['email']
         password = request.GET['password']
-        confpassword = request.GET['confpassword']
-        
-        retorno = cadastroComCep.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
-        print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
+
+
+        retorno = cadastroComCep.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password)
+        print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password)
         return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)

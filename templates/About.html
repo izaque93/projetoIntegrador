@@ -60,19 +60,17 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>Home</a></li>
-                                        <!--li><a href={% url 'About' %}>Sobre Nós</a></li-->
-                                        <li><a href={% url 'Cause' %}>Causa</a></li>
-                                        <li>
-                                            <a href={% url 'contact' %}>Contato</a>
-                                        </li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'Cause' %}">Causa</a></li>
+                                        <li><a href="{% url 'contact' %}">Contato</a></li>
+                                        <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
                                         <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
-                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
+                                        <a href="{% url 'entrar' %}">Entrar</a>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +117,7 @@
                             <label class="label-input" for="">
                             <input class="form-control" name="cep" type="text" id="cep" value="" size="9" maxlength="9"
                                             placeholder= "CEP" onblur="pesquisacep(this.value);" /></label>
-                                
+
                             <label class="label-input" for="">
                             <input class="form-control" name="rua" type="text" id="rua" size="50" placeholder = "Rua" /></label>
                             <label class="label-input" for="" >
@@ -132,7 +130,7 @@
                             <input class="form-control" name="cidade" type="text" id="cidade" size="30" placeholder = "Cidade" /></label>
                             <label class="label-input" for="">
                             <input class="form-control" name="uf" type="text" id="uf" size="2" placeholder = "UF" /></label>
-                    
+
                         </form>
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
@@ -145,7 +143,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Password" aria-label="Username" id="password"  aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Password" aria-label="Username" id="password"  aria-describedby="basic-addon1">
 
                     </div>
                     <br>
@@ -154,16 +152,13 @@
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                             <!--<span class="input-group-text" id="basic-addon1">$</span>-->
                         </div>
-                        <input type="text" class="form-control" placeholder="Confirm Password" aria-label="Username" id="confpassword" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username" id="confpassword" aria-describedby="basic-addon1">
 
                     </div>
                 </br>
-
-                    <a href= {% url 'account' %}  class="boxed-btn4">Entrar</a>
                     <input type="submit"  class="boxed-btn4" id="enviarCadastro" name="enviarCadastro"/>
-                    <!--<a href= {% url 'About' %} class="boxed-btn4" id="">Cadastrar</a>-->
                 </div>
-                
+
             </div>
         </div>
 

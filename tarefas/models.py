@@ -48,17 +48,15 @@ class CadastroDoacoes:
                               {message}</p></html>'
                               }
                     )
-#["juliocartier@gmail.com", "willartes@gmail.com", "jecolle@gmail.com"]
 
-    def cadastroComCep(self, cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword):
-        connection = Connection() 
+    def cadastroComCep(self, cep, rua, numero, complemento, bairro, cidade, uf, email, password):
+        connection = Connection()
         try:
             cur = connection.conn()
             cur_aux = cur.cursor()
-            SQL = f"""INSERT INTO CADASTRO(CEP, RUA, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF, EMAIL, PASSWORD, CONFPASSWORD)
-                                            VALUES(%S, %S, %S, %S, %S, %S, %S, %S, %S, %S);"""
-            dados = (cep, rua, numero, complemento, bairro, cidade, uf, email, password, confpassword)
-            
+            SQL = f"""INSERT INTO CADASTRO(CEP, RUA, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF, EMAIL, PASSWORD)
+                                            VALUES(%S, %S, %S, %S, %S, %S, %S, %S, %S);"""
+            dados = (cep, rua, numero, complemento, bairro, cidade, uf, email, password)
             cur_aux.execute(SQL, dados)
 
             cur.commit()

@@ -60,18 +60,17 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>Home</a></li>
-                                        <!--li><a href={% url 'About' %}>Sobre Nós</a></li-->
-                                        <li><a href={% url 'Cause' %}>Causa</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'Cause' %}">Causa</a></li>
                                         <li>
-                                            <a href={% url 'contact' %}>Contato</a>
+                                            <a href="{% url 'contact' %}">Contato</a>
                                         </li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Fazer uma Doação</a>
+                                        <a data-scroll-nav='1' href="{% url 'cadastro' %}">Entrar</a>
                                     </div>
                                 </div>
                             </div>

@@ -95,18 +95,15 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>Home</a></li>
-                                        <!--li><a href={% url 'About' %}>Sobre Nós</a></li-->
-                                        <li><a href={% url 'Cause' %}>Causa</a></li>
-                                        <li>
-                                            <a href={% url 'contact' %}>Contato</a>
-                                        </li>
-                                        <!--<li><a href="contact.html">Contato</a></li>-->
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'Cause' %}">Causa</a></li>
+                                        <li><a href="{% url 'contact' %}">Contato</a></li>
+                                        <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a href="{% url 'doacoes' %}">Fazer uma Doação</a>
+                                        <a href="{% url 'entrar' %}">Entrar</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,21 +169,20 @@
                                 styles: grayStyles,
                                 scrollwheel: false
                             });
-                            var ponto = new google.maps.LatLng(-23.6569002, -46.5989814); 
+                            var ponto = new google.maps.LatLng(-23.6569002, -46.5989814);
                             var marker = new google.maps.Marker({
                                 position: ponto,
                                 title: "Coração em ação",
                                 map: map,
-                                icon: {% static 'img/map.png' %}
+                                icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
                             });
                         }
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK44QEg3OFaU3UqqPocXzUlZeMdml59Xo&amp;callback=initMap">
                     </script>
-    
+
                 </div>
-    
-    
+
                 <div class="row">
                     <div class="col-12">
                         <h2 class="contact-title">Entrar em Contato</h2>

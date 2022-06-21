@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% load static %}  
+{% load static %}
 
     {% block titulo %}
 
     <title>Coração em Ação</title>
-    
+
     {% endblock %}
 
-    
+
     {% block conteudo %}
 
     <header>
@@ -60,19 +60,16 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href={% url 'index' %}>Home</a></li>
-                                        <!--li><a href={% url 'About' %}>Sobre Nós</a></li-->
-                                        <li><a href={% url 'Cause' %}>causa</a></li>
-                                        <li><a href={% url 'contact' %}>Contato</a>
-                                            
-                                        </li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'Cause' %}">causa</a></li>
+                                        <li><a href="{% url 'contact' %}">Contato</a></li>
+                                        <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
                                         <!--<li><a href="contact.html">Contato</a></li>-->
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <!--<a data-scroll-nav='1' href="#">Fazer uma Doação</a>-->
-                                        <a href={% url 'doacoes' %}>Fazer uma Doação</a>
+                                        <a href="{% url 'entrar' %}">Entrar</a>
                                     </div>
                                 </div>
                             </div>
@@ -130,12 +127,11 @@
                         <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
 
                     </div>
-                
-                    <a href = "{% url 'About' %}">Esqueceu sua senha?</a>
+                    <a href = "{% url 'cadastro' %}">Esqueceu sua senha?</a>
                 </br>
                 <br>
-                    <a href= {% url 'About' %} class="boxed-btn4">Cadastrar</a>    
-                    <a href= {% url 'accountCep' %} class="boxed-btn4">Enviar</a>
+                    <a href= "{% url 'cadastro' %}" class="boxed-btn4">Cadastrar</a>
+                    <a href= "{% url 'accountCep' %" class="boxed-btn4">Enviar</a>
                 </div>
             </div>
         </div>

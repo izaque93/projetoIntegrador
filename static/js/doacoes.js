@@ -152,7 +152,7 @@ $(document).ready(function() {
         dados = {message, name, email, subject}
 
         console.log("Entrouu", dados)
-        
+
         $.ajax({
             url: "/enviarEmailContatos",
             type: "GET",
