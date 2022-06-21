@@ -12,5 +12,6 @@ urlpatterns = [
     path('contato', views.contato, name= 'contact'),
     path('enviaDadosDoacoes', views.enviaDadosDoacoes, name='enviaDadosDoacoes'),
     path('enviarEmailContatos', views.enviarEmailContatos, name='enviarEmailContatos'),
-    path('cadastroComCep', views.cadastroComCep, name = 'cadastroComCep')
+    path('cadastroComCep', views.cadastroComCep, name = 'cadastroComCep'),
+    path('entrarIndex', views.entrarIndex, name = 'entrarIndex'),
 ]

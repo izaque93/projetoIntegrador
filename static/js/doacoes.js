@@ -111,34 +111,68 @@ $(document).ready(function() {
 
     $("#enviarCadastro").click(function() {
 
+        cep = $("#cep").val()
+        rua = $("#rua").val()
+        numero = $("#numero").val()
+        complemento = $("#complemento").val()
+        bairro = $("#bairro").val()
+        cidade = $("#cidade").val()
+        uf = $("#uf").val()
         email = $("#email").val()
         password = $("#password").val()
         confpassword = $("#confpassword").val()
 
-        console.log(email,password, confpassword)
+        /*email = $("#email").val()
+        password = $("#password").val()
+        confpassword = $("#confpassword").val()*/
 
-        dados = {
-            email,
-            password,
-            confpassword
+        if (password == confpassword) {
+            dados = {
+                cep,
+                rua,
+                numero,
+                complemento,
+                bairro,
+                cidade,
+                uf,
+                email,
+                password,
+                confpassword
+            }
+            $("#mensagem").hide()
+            $("#mensagem2").hide()
+
+            document.getElementById('password').style.color = 'black';
+            document.getElementById('confpassword').style.color = 'black';
+            $.ajax({
+                url: "/cadastroComCep",
+                type: "GET",
+                dataType: "json",
+                data: dados,
+                success: function(response) {
+                    console.log(response)
+                        //data - response from server
+                },
+                error: function(response) {
+
+                }
+            });
+
+
+            console.log(dados)
+        } else {
+            $("#mensagem").show()
+            $("#mensagem2").show()
+            alert("As senhas não estão iguais. Por favor, digite as mesmas senhas!")
+            document.getElementById('password').style.color = 'red';
+            document.getElementById('mensagem').innerHTML = 'Não são iguais';
+
+            document.getElementById('confpassword').style.color = 'red';
+            document.getElementById('mensagem2').innerHTML = 'Não são iguais';
+
+            //$("#password").focus()
+            //$("#confpassword").focus()
         }
-
-        // $.ajax({
-        //     url: "/enviaDadosDoacoes",
-        //     type: "GET",
-        //     dataType: "json",
-        //     data: dados,
-        //     success: function(response) {
-        //         console.log(response)
-        //             //data - response from server
-        //     },
-        //     error: function(response) {
-
-        //     }
-        // });
-
-        console.log(dados)
-
 
 
     })
@@ -168,6 +202,36 @@ $(document).ready(function() {
         });
 
     })
+
+    $("#entrar").click(function(){
+        email = $("#email").val()
+        password = $("#password").val()
+
+        dados = {email, password}
+
+        console.log("Entrouu", dados)
+
+        $.ajax({
+            url: "/entrarIndex",
+            type: "GET",
+            dataType: "json",
+            data: dados,
+            success: function(response) {
+                console.log(response)
+                if (response.status == 401) {
+                    alert("Usuario não encontrado")
+                } else {
+                    window.location = "/doacoes"
+                }
+                    //data - response from server
+            },
+            error: function(response) {
+
+            }
+        });
+
+    })
+
 })
 
 

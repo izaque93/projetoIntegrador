@@ -115,7 +115,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="E-mail" id="email" aria-label="Username" aria-describedby="basic-addon1">
 
                     </div>
                     <br>
@@ -124,14 +124,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="flaticon-ui"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Password" aria-label="Username"  aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Password" id="password" aria-label="Username"  aria-describedby="basic-addon1">
 
                     </div>
                     <a href = "{% url 'cadastro' %}">Esqueceu sua senha?</a>
                 </br>
                 <br>
                     <a href= "{% url 'cadastro' %}" class="boxed-btn4">Cadastrar</a>
-                    <a href= "{% url 'accountCep' %" class="boxed-btn4">Enviar</a>
+                    <input type="submit"  class="boxed-btn4" id="entrar" name="entrar"/>
                 </div>
             </div>
         </div>

@@ -55,12 +55,32 @@ class CadastroDoacoes:
             cur = connection.conn()
             cur_aux = cur.cursor()
             SQL = f"""INSERT INTO CADASTRO(CEP, RUA, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF, EMAIL, PASSWORD)
-                                            VALUES(%S, %S, %S, %S, %S, %S, %S, %S, %S);"""
+                                            VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s);"""
             dados = (cep, rua, numero, complemento, bairro, cidade, uf, email, password)
             cur_aux.execute(SQL, dados)
 
             cur.commit()
             cur_aux.close()
             return "Inseridos com sucesso"
+        except Exception as e:
+            print(e)
+
+    def usuario_entrar(self, email, password):
+        connection = Connection()
+        usuario_out = []
+        try:
+            cur = connection.conn()
+            cur_aux = cur.cursor()
+            SQL = f"""SELECT EMAIL, PASSWORD FROM CADASTRO WHERE EMAIL = %s AND PASSWORD = %s;"""
+            dados = (email, password)
+            cur_aux.execute(SQL, dados)
+
+            #print("Entrouuu", cur_aux.fetchall())
+            retorno  = cur_aux.fetchone()
+
+            if len(retorno) > 0:
+                return retorno
+            else:
+                return None
         except Exception as e:
             print(e)

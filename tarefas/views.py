@@ -1,6 +1,7 @@
 import email
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseBadRequest, JsonResponse
+from requests import request
 from tarefas.models import CadastroDoacoes
 import json
 
@@ -64,7 +65,7 @@ def enviarEmailContatos(request):
     return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)
 
 def cadastroComCep(request):
-    cadastroComCep = CadastroDoacoes()
+    cadastro = CadastroDoacoes()
     is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
     if is_ajax:
         #data = json.loads(request)
@@ -79,6 +80,21 @@ def cadastroComCep(request):
         password = request.GET['password']
 
 
-        retorno = cadastroComCep.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password)
+        retorno = cadastro.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password)
         print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password)
         return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)
+
+def entrarIndex(request):
+    cadastro = CadastroDoacoes()
+    is_ajax = request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+    if is_ajax:
+        email = request.GET['email']
+        password = request.GET['password']
+
+        retorno = cadastro.usuario_entrar(email, password)
+
+        if retorno is not None:
+            return JsonResponse({'msg': "Usuario encontrado", 'status': 200, "retorno": retorno}, status=200)
+        else:
+            print("Entrouuuu 21111")
+            return JsonResponse({'msg': "Usuario não encontrado", 'status': 401})
