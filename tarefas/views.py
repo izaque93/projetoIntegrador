@@ -78,11 +78,15 @@ def cadastroComCep(request):
         uf = request.GET['uf']
         email = request.GET['email']
         password = request.GET['password']
-
-
-        retorno = cadastro.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password)
-        print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password)
-        return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)
+        
+        retorno_usuario = cadastro.verifica_usuario(email)
+        
+        if retorno_usuario[0] == 1:
+            return JsonResponse({"msg": "Usuario já existe", "status": 401})
+        else:
+            retorno = cadastro.cadastroComCep(cep, rua, numero, complemento, bairro, cidade, uf, email, password)
+            print("Cadastrado ", cep, rua, numero, complemento, bairro, cidade, uf, email, password)
+            return JsonResponse({'msg': "mensagem", 'status': 200}, status=200)
 
 def entrarIndex(request):
     cadastro = CadastroDoacoes()

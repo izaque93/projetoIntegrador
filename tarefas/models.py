@@ -84,3 +84,29 @@ class CadastroDoacoes:
                 return None
         except Exception as e:
             print(e)
+
+    def verifica_usuario(self, email):
+
+        connection = Connection()
+        try:
+            cur = connection.conn()
+            cur_aux = cur.cursor()
+
+            SQL_VERIFICA = f"""
+                SELECT CASE
+                        WHEN COUNT(email) > 0
+                            THEN 1
+                        ELSE 0
+                      END USUARIO_EXISTE FROM CADASTRO
+                WHERE email = %s;
+            """
+
+            dados = (email,)
+
+            cur_aux.execute(SQL_VERIFICA, dados)
+
+            usuario_existe = cur_aux.fetchall()[0]
+
+            return usuario_existe
+        except Exception as e:
+            print(e)

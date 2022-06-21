@@ -151,6 +151,11 @@ $(document).ready(function() {
                 data: dados,
                 success: function(response) {
                     console.log(response)
+                    if (response.status == 401){
+                        alert("Usuario já existe na base de dados. Por favor, insera outro E-mail.")
+                    } else{
+                        console.log("Usuario inserido")
+                    }
                         //data - response from server
                 },
                 error: function(response) {
