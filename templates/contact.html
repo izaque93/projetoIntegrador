@@ -86,7 +86,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{% url 'index' %}">
                                     <img class = "photo" src="{% static 'img/logo1.png' %}" alt="">
                                 </a>
                             </div>
@@ -159,7 +159,7 @@
                                 {
                                     elementType: 'labels.text.fill',
                                     stylers: [{
-                                        color: '#87CEFA'
+                                        color: '#00008B'
                                     }]
                                 }
                             ];
@@ -171,6 +171,13 @@
                                 zoom: 18,
                                 styles: grayStyles,
                                 scrollwheel: false
+                            });
+                            var ponto = new google.maps.LatLng(-23.6569002, -46.5989814); 
+                            var marker = new google.maps.Marker({
+                                position: ponto,
+                                title: "Coração em ação",
+                                map: map,
+                                icon: {% static 'img/map.png' %}
                             });
                         }
                     </script>
