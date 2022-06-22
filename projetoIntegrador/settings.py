@@ -149,4 +149,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#ALLOWED_HOSTS = ['http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['0.0.0.0',
+                 'arcane-sands-05355.herokuapp.com',
+                'http://127.0.0.1:8000/',
+                 ]
