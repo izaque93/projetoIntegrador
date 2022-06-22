@@ -78,9 +78,9 @@ def cadastroComCep(request):
         uf = request.GET['uf']
         email = request.GET['email']
         password = request.GET['password']
-        
+
         retorno_usuario = cadastro.verifica_usuario(email)
-        
+
         if retorno_usuario[0] == 1:
             return JsonResponse({"msg": "Usuario já existe", "status": 401})
         else:
