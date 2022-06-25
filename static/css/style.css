@@ -234,6 +234,16 @@ p {
     margin-bottom: 0px;
     font-family: "Open Sans", sans-serif;
 }
+.paragrafo {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.88;
+    color: #5c5c5c;
+    margin-bottom: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
 
 
 /* line 68, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_theme-default.scss */
@@ -3495,16 +3505,21 @@ h3 {
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    padding: 15px 5px 5px 2px;
+    padding: 15px 10px 10px 10px;
     left: 120px;
 }
 
 
 /* line 34, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
 
-.reson_area .single_reson .help_content h4 {
+.reson_area .single_reson content h4 {
     font-size: 20px;
     font-weight: 400;
+}
+
+.ajuda {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
