@@ -14,7 +14,6 @@ import os
 from pathlib import Path
 import django_heroku
 #django_heroku.settings(locals(), staticfiles=False)
-django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -154,3 +153,5 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  'arcane-sands-05355.herokuapp.com',
                 'http://127.0.0.1:8000/',
                  ]
+
+django_heroku.settings(locals())
