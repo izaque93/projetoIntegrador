@@ -38,6 +38,9 @@ def contaCep(request):
 def contato(request):
     return render(request, 'contact.html')
 
+def entrar(request):
+    return render(request, 'entrar.html')
+
 
 def enviaDadosDoacoes(request):
     cadastro = CadastroDoacoes()
